@@ -1,0 +1,362 @@
+{
+  "description": "Column mapping configuration for sales data ETL pipeline",
+  "version": "1.0",
+  "required_fields": [
+    "product_name",
+    "sales_amount",
+    "order_date",
+    "quantity"
+  ],
+  "optional_fields": [
+    "customer_id",
+    "store_location",
+    "product_category",
+    "sales_rep",
+    "discount_amount",
+    "tax_amount",
+    "shipping_cost"
+  ],
+  "field_mappings": {
+    "product_name": {
+      "description": "Name or description of the product",
+      "aliases": [
+        "product_name",
+        "product",
+        "item_name",
+        "item",
+        "product_description",
+        "item_description",
+        "name",
+        "product_title"
+      ],
+      "patterns": [
+        "product.*name",
+        "item.*name",
+        ".*product.*",
+        ".*item.*"
+      ],
+      "keywords": [
+        "product",
+        "item",
+        "name",
+        "title",
+        "description"
+      ]
+    },
+    "sales_amount": {
+      "description": "Total sales amount or revenue",
+      "aliases": [
+        "sales_amount",
+        "sales",
+        "amount",
+        "revenue",
+        "total_sales",
+        "sale_amount",
+        "total_amount",
+        "gross_sales",
+        "net_sales",
+        "price",
+        "total_price",
+        "value"
+      ],
+      "patterns": [
+        ".*sales.*amount.*",
+        ".*amount.*",
+        ".*revenue.*",
+        ".*price.*",
+        ".*value.*"
+      ],
+      "keywords": [
+        "sales",
+        "amount",
+        "revenue",
+        "price",
+        "total",
+        "value",
+        "money"
+      ]
+    },
+    "order_date": {
+      "description": "Date when the order was placed",
+      "aliases": [
+        "order_date",
+        "date",
+        "order_date",
+        "purchase_date",
+        "sale_date",
+        "transaction_date",
+        "created_date",
+        "timestamp",
+        "datetime"
+      ],
+      "patterns": [
+        ".*date.*",
+        ".*time.*",
+        ".*created.*",
+        ".*order.*date.*",
+        ".*purchase.*date.*"
+      ],
+      "keywords": [
+        "date",
+        "time",
+        "order",
+        "purchase",
+        "sale",
+        "transaction",
+        "created"
+      ]
+    },
+    "quantity": {
+      "description": "Quantity of items sold",
+      "aliases": [
+        "quantity",
+        "qty",
+        "amount",
+        "count",
+        "units",
+        "units_sold",
+        "qty_sold",
+        "quantity_sold",
+        "items_sold",
+        "volume"
+      ],
+      "patterns": [
+        ".*qty.*",
+        ".*quantity.*",
+        ".*count.*",
+        ".*units.*",
+        ".*volume.*"
+      ],
+      "keywords": [
+        "quantity",
+        "qty",
+        "count",
+        "units",
+        "volume",
+        "sold"
+      ]
+    },
+    "customer_id": {
+      "description": "Unique identifier for the customer",
+      "aliases": [
+        "customer_id",
+        "cust_id",
+        "customer",
+        "client_id",
+        "user_id",
+        "account_id",
+        "customer_number",
+        "client"
+      ],
+      "patterns": [
+        ".*customer.*id.*",
+        ".*cust.*id.*",
+        ".*client.*id.*",
+        ".*user.*id.*"
+      ],
+      "keywords": [
+        "customer",
+        "client",
+        "user",
+        "account",
+        "id"
+      ]
+    },
+    "store_location": {
+      "description": "Location or store where the sale occurred",
+      "aliases": [
+        "store_location",
+        "location",
+        "store",
+        "branch",
+        "outlet",
+        "shop",
+        "store_name",
+        "branch_name",
+        "city",
+        "region"
+      ],
+      "patterns": [
+        ".*store.*",
+        ".*location.*",
+        ".*branch.*",
+        ".*outlet.*",
+        ".*shop.*"
+      ],
+      "keywords": [
+        "store",
+        "location",
+        "branch",
+        "outlet",
+        "shop",
+        "city",
+        "region"
+      ]
+    },
+    "product_category": {
+      "description": "Category or type of the product",
+      "aliases": [
+        "product_category",
+        "category",
+        "type",
+        "product_type",
+        "item_category",
+        "item_type",
+        "class",
+        "group",
+        "department"
+      ],
+      "patterns": [
+        ".*category.*",
+        ".*type.*",
+        ".*class.*",
+        ".*group.*",
+        ".*department.*"
+      ],
+      "keywords": [
+        "category",
+        "type",
+        "class",
+        "group",
+        "department"
+      ]
+    },
+    "sales_rep": {
+      "description": "Sales representative who handled the sale",
+      "aliases": [
+        "sales_rep",
+        "salesperson",
+        "rep",
+        "sales_person",
+        "agent",
+        "sales_agent",
+        "representative",
+        "employee",
+        "staff"
+      ],
+      "patterns": [
+        ".*sales.*rep.*",
+        ".*sales.*person.*",
+        ".*agent.*",
+        ".*representative.*"
+      ],
+      "keywords": [
+        "sales",
+        "rep",
+        "person",
+        "agent",
+        "representative",
+        "employee"
+      ]
+    },
+    "discount_amount": {
+      "description": "Amount of discount applied",
+      "aliases": [
+        "discount_amount",
+        "discount",
+        "discount_value",
+        "savings",
+        "reduction",
+        "markdown"
+      ],
+      "patterns": [
+        ".*discount.*",
+        ".*savings.*",
+        ".*reduction.*",
+        ".*markdown.*"
+      ],
+      "keywords": [
+        "discount",
+        "savings",
+        "reduction",
+        "markdown"
+      ]
+    },
+    "tax_amount": {
+      "description": "Amount of tax charged",
+      "aliases": [
+        "tax_amount",
+        "tax",
+        "tax_value",
+        "vat",
+        "gst",
+        "sales_tax"
+      ],
+      "patterns": [
+        ".*tax.*",
+        ".*vat.*",
+        ".*gst.*"
+      ],
+      "keywords": [
+        "tax",
+        "vat",
+        "gst"
+      ]
+    },
+    "shipping_cost": {
+      "description": "Cost of shipping or delivery",
+      "aliases": [
+        "shipping_cost",
+        "shipping",
+        "delivery_cost",
+        "freight",
+        "postage",
+        "shipping_fee",
+        "delivery_fee"
+      ],
+      "patterns": [
+        ".*shipping.*",
+        ".*delivery.*",
+        ".*freight.*",
+        ".*postage.*"
+      ],
+      "keywords": [
+        "shipping",
+        "delivery",
+        "freight",
+        "postage",
+        "fee"
+      ]
+    }
+  },
+  "data_types": {
+    "product_name": "string",
+    "sales_amount": "float",
+    "order_date": "datetime",
+    "quantity": "integer",
+    "customer_id": "string",
+    "store_location": "string",
+    "product_category": "string",
+    "sales_rep": "string",
+    "discount_amount": "float",
+    "tax_amount": "float",
+    "shipping_cost": "float"
+  },
+  "validation_rules": {
+    "sales_amount": {
+      "min_value": 0,
+      "max_value": 1000000
+    },
+    "quantity": {
+      "min_value": 1,
+      "max_value": 10000
+    },
+    "discount_amount": {
+      "min_value": 0,
+      "max_value": 10000
+    },
+    "tax_amount": {
+      "min_value": 0,
+      "max_value": 50000
+    },
+    "shipping_cost": {
+      "min_value": 0,
+      "max_value": 1000
+    }
+  },
+  "default_values": {
+    "discount_amount": 0.0,
+    "tax_amount": 0.0,
+    "shipping_cost": 0.0
+  }
+}
